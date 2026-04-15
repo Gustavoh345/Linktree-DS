@@ -22,31 +22,15 @@ interface MainEditPageProps{
     setFacebook: (value: string) => void;
 }
 
-interface Link {
+{/*interface Link {
     name: string,
     url: string
-}
+}*/}
 
 export const MainEditPage = ({name, setName, github, setGithub, linkedin, setLinkedin, instagram, setInstagram, tiktok, setTiktok, facebook, setFacebook}:
     MainEditPageProps) => {
 
-        const [links, setLinks] = useState<Link[]>([]);
         
-        const handleAddLink = () => {
-            setLinks([...links, {name: "", url:""}]);
-        };
-            
-
-        const handleLinkChange = (index: number, field: string, value: string) => {
-            const updateLinks = [...links];
-
-        updateLinks[index] = {
-            ...updateLinks[index],
-            [field]: value
-            }
-
-            setLinks(updateLinks)
-        }
     
     return (
         <main className="w-8/12  p-4">
